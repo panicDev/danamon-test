@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">DanamonTest</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_photos">From Album (%1$d) and From Id(%2$d)\n<b>%3$s</b>\n%4$s</string>
+    <string name="login">Log in</string>
+    <string name="login_desc">Enter your registered email to continue</string>
+    <string name="auth_email_title">Email<font color="#FF0000" tools:keep="@font/"> *</font></string>
+    <string name="password_auth_title">Password<font color="#FF0000" tools:keep="@font/"> *</font></string>
+    <string name="register_hint_email">e.g, name@email.com</string>
+    <string name="password_hint">\u25CF\u25CF\u25CF\u25CF\u25CF\u25CF\u25CF\u25CF</string>
+    <string name="continue_text">Continue</string>
+    <string name="edit_text">Edit</string>
+    <string name="register_now">Not have an account? Register.</string>
+    <string name="register">Register</string>
+
+    <string name="register_desc">Please fill in a few details below</string>
+    <string name="register_name_title">Username<font color="#FF0000" tools:keep="@font/"> *</font></string>
+    <string name="register_email_title">Email<font color="#FF0000" tools:keep="@font/"> *</font></string>
+    <string name="register_referral_title">Referral code (Optional)</string>
+    <string name="register_hint_username">e.g, johndoe</string>
+    <string name="register_hint_referral">No Code? Skip and do it later</string>
+</resources>

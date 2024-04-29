@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/space_x3"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/space_x3"
+    app:cardElevation="@dimen/space_x3"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_x3">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_x3"
+            android:fontFamily="@font/lexend_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_x4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="ID: 1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_x3"
+            android:ellipsize="end"
+            android:fontFamily="@font/lexend_regular"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_x4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_id"
+            tools:text="Username: cristiano" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_x3"
+            android:ellipsize="end"
+            android:fontFamily="@font/lexend_regular"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_x4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_username"
+            tools:text="Email: cristiano.ronaldo@ronaldoworld.com" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_role"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_x3"
+            android:ellipsize="end"
+            android:fontFamily="@font/lexend_regular"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_x4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_email"
+            tools:text="Role: Admin" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_edit"
+            android:layout_width="@dimen/space_x0"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/space_x6"
+            android:layout_marginTop="@dimen/space_x6"
+            android:layout_marginEnd="@dimen/space_x6"
+            android:layout_marginBottom="@dimen/space_x3"
+            android:backgroundTint="@color/black_39"
+            android:enabled="false"
+            android:fontFamily="@font/maison_neue_bold"
+            android:includeFontPadding="false"
+            android:insetLeft="@dimen/space_x1"
+            android:insetTop="@dimen/space_x1"
+            android:insetRight="@dimen/space_x1"
+            android:insetBottom="@dimen/space_x1"
+            android:text="@string/edit_text"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_x4"
+            android:textStyle="bold"
+            app:cornerRadius="@dimen/space_x3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_role" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

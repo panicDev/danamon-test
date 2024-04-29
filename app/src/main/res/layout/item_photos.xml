@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/space_x4"
+    android:elevation="@dimen/space_x1"
+    android:theme="@style/Theme.Material3.Light.NoActionBar"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/space_x3"
+    app:cardElevation="@dimen/space_x1"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_thumbnail"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/space_x50"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/mock_thumbnail_photos" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_photos"
+            style="@style/TextHeader.Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.40"
+            android:padding="@dimen/space_x4"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_thumbnail"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="From Album id (1) and Id (3), \nReprehenderit eat deserunt valit itsam\nhttps://via.placeholder.com/600/771796" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

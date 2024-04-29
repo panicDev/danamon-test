@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_register_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/backgroundContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/progressLineView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbarContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_x14"
+            android:paddingStart="@dimen/space_x3"
+            android:paddingEnd="@dimen/space_x3"
+            app:layout_constraintBottom_toTopOf="@id/progressLineView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/backArrowView"
+                android:layout_width="@dimen/space_x10"
+                android:layout_height="@dimen/space_x10"
+                android:background="?android:attr/actionBarItemBackground"
+                android:padding="@dimen/space_x3"
+                android:src="@drawable/back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black"
+                tools:ignore="ContentDescription,UnusedAttribute" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/progressLineView"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/nav_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_x5"
+        android:layout_marginVertical="@dimen/space_x3"
+        android:padding="@dimen/space_x2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_register_toolbar">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maison_neue_bold"
+            android:text="@string/register"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_x7" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/desc_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_x2"
+            android:fontFamily="@font/maison_neue_book"
+            android:text="@string/register_desc"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_x6" />
+
+        <RadioButton
+            android:id="@+id/rb_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_x5"
+            android:fontFamily="@font/lexend_medium"
+            android:padding="@dimen/space_x1"
+            android:text="Register as Admin"
+            android:textSize="@dimen/text_x4" />
+
+        <RadioButton
+            android:id="@+id/rb_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_x2"
+            android:fontFamily="@font/lexend_medium"
+            android:padding="@dimen/space_x1"
+            android:text="Register as Basic user"
+            android:textSize="@dimen/text_x4" />
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/register_name_title_mandatory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_x6"
+        android:layout_marginTop="@dimen/space_x5"
+        android:fontFamily="@font/maison_neue_book"
+        android:text="@string/register_name_title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_x4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_register" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/view_field_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="@dimen/space_x0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_x6"
+        android:layout_marginEnd="@dimen/space_x6"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/field_selector"
+        app:hintEnabled="false"
+        app:hintTextColor="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_name_title_mandatory">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_name_field_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maison_neue_bold"
+            android:hint="@string/register_hint_username"
+            android:inputType="text"
+            android:paddingHorizontal="@dimen/space_x0"
+            android:paddingVertical="@dimen/space_x2"
+            android:paddingStart="@dimen/space_x0"
+            android:paddingEnd="@dimen/space_x0"
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/text_x6" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/register_email_title_mandatory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_x6"
+        android:layout_marginTop="@dimen/space_x4"
+        android:fontFamily="@font/maison_neue_book"
+        android:text="@string/register_email_title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_x4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_field_name" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/view_field_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="@dimen/space_x0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_x6"
+        android:layout_marginEnd="@dimen/space_x6"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/field_selector"
+        app:hintEnabled="false"
+        app:hintTextColor="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_email_title_mandatory">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_email_field_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maison_neue_bold"
+            android:hint="@string/register_hint_email"
+            android:inputType="textPersonName|textEmailAddress"
+            android:paddingHorizontal="@dimen/space_x0"
+            android:paddingVertical="@dimen/space_x2"
+            android:paddingStart="@dimen/space_x0"
+            android:paddingEnd="@dimen/space_x0"
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/text_x6" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/register_phone_title_mandatory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_x6"
+        android:layout_marginTop="@dimen/space_x4"
+        android:fontFamily="@font/maison_neue_book"
+        android:text="@string/password_auth_title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_x4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_field_email" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/view_field_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="@dimen/space_x0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_x6"
+        android:layout_marginEnd="@dimen/space_x6"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/field_selector"
+        app:hintEnabled="false"
+        app:hintTextColor="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_phone_title_mandatory">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_password_field_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maison_neue_bold"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:paddingHorizontal="@dimen/space_x0"
+            android:paddingVertical="@dimen/space_x2"
+            android:paddingStart="@dimen/space_x0"
+            android:paddingEnd="@dimen/space_x0"
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/text_x6" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_continue"
+        style="@style/Theme.Material3.Dark.NoActionBar"
+        android:layout_width="@dimen/space_x0"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="@dimen/space_x6"
+        android:layout_marginEnd="@dimen/space_x6"
+        android:layout_marginBottom="@dimen/space_x5"
+        android:enabled="false"
+        android:fontFamily="@font/maison_neue_bold"
+        android:insetLeft="@dimen/space_x0"
+        android:insetTop="@dimen/space_x0"
+        android:insetRight="@dimen/space_x0"
+        android:insetBottom="@dimen/space_x0"
+        android:text="@string/continue_text"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_x5"
+        android:textStyle="bold"
+        app:backgroundTint="@color/auth_button_color"
+        app:cornerRadius="@dimen/space_x6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/ProgressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

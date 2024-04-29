@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.Material3.Light.NoActionBar">
+
+    <RadioGroup
+        android:id="@+id/rg_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_x5"
+        android:layout_marginVertical="@dimen/space_x10"
+        android:padding="@dimen/space_x2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maison_neue_bold"
+            android:includeFontPadding="false"
+            android:text="@string/login"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_x7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_login_toolbar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/desc_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_x2"
+            android:fontFamily="@font/maison_neue_book"
+            android:text="@string/login_desc"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_x5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_login" />
+
+        <RadioButton
+            android:id="@+id/rb_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_x5"
+            android:fontFamily="@font/lexend_medium"
+            android:padding="@dimen/space_x1"
+            android:text="Login as Admin"
+            android:textSize="@dimen/text_x4" />
+
+        <RadioButton
+            android:id="@+id/rb_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_x2"
+            android:fontFamily="@font/lexend_medium"
+            android:padding="@dimen/space_x1"
+            android:text="Login as Basic user"
+            android:textSize="@dimen/text_x4" />
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/email_title_mandatory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_x5"
+        android:layout_marginTop="@dimen/space_x5"
+        android:fontFamily="@font/maison_neue_book"
+        android:padding="@dimen/space_x2"
+        android:text="@string/auth_email_title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_x4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_login" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/view_field_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_x5"
+        android:layout_marginEnd="@dimen/space_x5"
+        android:padding="@dimen/space_x2"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/field_selector"
+        app:hintEnabled="false"
+        app:hintTextColor="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_title_mandatory">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_phone_field_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maison_neue_book"
+            android:hint="Masukan Email"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="0dp"
+            android:paddingVertical="@dimen/space_x2"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/text_x6" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/password_title_mandatory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_x5"
+        android:layout_marginTop="@dimen/space_x5"
+        android:fontFamily="@font/maison_neue_book"
+        android:padding="@dimen/space_x2"
+        android:text="@string/password_auth_title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_x4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_field_email" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/view_field_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_x5"
+        android:layout_marginEnd="@dimen/space_x5"
+        android:padding="@dimen/space_x2"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/field_selector"
+        app:hintEnabled="false"
+        app:hintTextColor="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_title_mandatory">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/field_email_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maison_neue_demi"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:paddingHorizontal="0dp"
+            android:paddingVertical="@dimen/space_x2"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/text_x6" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/change_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_x6"
+        android:layout_marginTop="@dimen/space_x5"
+        android:fontFamily="@font/maison_neue_bold"
+        android:text="@string/register_now"
+        android:textColor="@color/black_39"
+        android:textSize="@dimen/text_x5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_field_password" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_continue"
+        style="@style/Theme.Material3.Dark.NoActionBar"
+        android:layout_width="@dimen/space_x0"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="@dimen/space_x6"
+        android:layout_marginEnd="@dimen/space_x6"
+        android:layout_marginBottom="@dimen/space_x5"
+        android:enabled="false"
+        android:fontFamily="@font/maison_neue_bold"
+        android:insetLeft="@dimen/space_x0"
+        android:insetTop="@dimen/space_x0"
+        android:insetRight="@dimen/space_x0"
+        android:insetBottom="@dimen/space_x0"
+        android:text="@string/continue_text"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_x5"
+        android:textStyle="bold"
+        app:backgroundTint="@color/auth_button_color"
+        app:cornerRadius="@dimen/space_x6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/ProgressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
